@@ -14,9 +14,6 @@ metadata:
 spec:
   scaleTargetRef:
     name: runner-deployment
-  minReplicas: 0
-  maxReplicas: 5
-  metrics:
-    - type: TotalNumberOfQueuedAndInProgressWorkflowRuns
-      repositoryNames:
-        - anicos/actions-self-runner
+  scaleUpTriggers:
+  - githubEvent: {}
+    duration: "30m"
