@@ -14,9 +14,9 @@ metadata:
 spec:
   scaleTargetRef:
     name: runner-deployment
-  minReplicas: 1
+  minReplicas: 0
   maxReplicas: 5
   metrics:
     - type: TotalNumberOfQueuedAndInProgressWorkflowRuns
       repositoryNames:
-        - tuladhar/self-hosted-runner
+        - anicos/actions-self-runner
